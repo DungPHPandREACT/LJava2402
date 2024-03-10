@@ -1,0 +1,29 @@
+.container {
+	width: 35%;
+	background: #dae8fc;
+	border: 1px solid #7092c1;
+	padding: 16px;
+    margin: auto;
+}
+
+h1 {
+	margin: 0;
+	background: #ffe6cc;
+	text-align: center;
+	border: 1px solid #e1ae33;
+	padding: 12px;
+}
+
+p {
+	background: #f8cecc;
+	border: 1px solid black;
+	padding: 12px 8px;
+}
+
+button {
+	background: #19a1e2;
+	padding: 4px 8px;
+	color: white;
+	border: 1px solid #189bdc;
+	border-radius: 4px;
+}

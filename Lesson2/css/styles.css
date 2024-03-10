@@ -1,0 +1,15 @@
+div {
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	/* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkjVbaLbI8svZYkSugg8x3BKc75IDJecBRf4fM_zmJQw&s'); */
+	/* background-image: url('../images-background.jpg'); */
+	/* background-image: linear-gradient(to right, red, yellow); */
+	/* background: url('../images-background.jpg'); */
+
+	border-bottom: black solid 1px;
+	/* border-width: 1px; */
+	/* border-style: solid; */
+	/* border-color: black; */
+
+	/* border-radius: 4px; */
+	/* border-top-right-radius: 4px; */
+}
