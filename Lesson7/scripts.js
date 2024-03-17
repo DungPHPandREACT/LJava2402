@@ -25,10 +25,68 @@ let sum = 0;
 // console.log(sum);
 
 // Bài 4: Nhập vào số n. Tính giai thừa của số n.
-let n = prompt('Nhập n: ');
+// let n = prompt('Nhập n: ');
 
-let gt = 1;
-for (let i = 1; i <= n; i++) {
-	gt = gt * i;
+// let gt = 1;
+// for (let i = 1; i <= n; i++) {
+// 	gt = gt * i;
+// }
+// console.log(gt);
+
+// vòng lặp while
+// let i = 1;
+// while (i <= 5) {
+// 	console.log(i);
+// 	i++;
+// }
+
+// for (let i = 1; i <= 5; i++) {
+// 	if (i == 3) {
+// 		continue;
+// 	}
+// 	console.log(i);
+// }
+
+// Bài 8: Nhập vào số n.
+// Viết chương trình kiểm tra xem n có phải số nguyên tố không.
+
+// const n = prompt('Nhập n:');
+// if (n >= 2) {
+// 	let count = 0;
+// 	for (let i = 1; i <= n; i++) {
+// 		if (n % i === 0) {
+// 			count++;
+// 		}
+// 	}
+// 	if (count === 2) {
+// 		console.log('Đây là số nguyên tố');
+// 	} else {
+// 		console.log('Đây không phải là số nguyên tố');
+// 	}
+// } else {
+// 	console.log('Đây không phải số nguyên tố');
+// }
+
+// Bài 5: Nhập vào 3 số a, b, x (a < b).
+// Tìm trong khoảng a, b số nhỏ nhất mà chia hết cho x.
+let a, b, x;
+do {
+	a = prompt('Nhập a: ');
+	b = prompt('Nhập b: ');
+	x = prompt('Nhập x: ');
+} while (a >= b);
+// for (; true; ) {
+// 	a = prompt('Nhập a: ');
+// 	b = prompt('Nhập b: ');
+// 	x = prompt('Nhập x: ');
+// 	if (a < b) {
+// 		break;
+// 	}
+// }
+
+for (let i = a; i <= b; i++) {
+	if (i % x === 0) {
+		console.log(i);
+		break;
+	}
 }
-console.log(gt);
