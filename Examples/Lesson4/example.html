@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			/* navigation 1 */
+			.navigation-1 {
+				display: flex;
+				border: 1px solid red;
+				justify-content: space-between;
+				padding: 8px 16px 8px 8px;
+			}
+
+			.pages {
+				display: flex;
+			}
+
+			p.logo {
+				border: 1px solid black;
+				padding: 8px 16px;
+			}
+
+			p.page {
+				border: 1px solid black;
+				padding: 8px 12px;
+			}
+
+			p.page.border-right-border-left-none {
+				border-right: none;
+				border-left: none;
+			}
+
+			/* navigation 2 */
+			.navigation-2 {
+				display: flex;
+				padding: 8px 16px 8px 8px;
+				border: 1px solid burlywood;
+				justify-content: space-between;
+				align-content: center;
+				align-items: center;
+			}
+
+			.navigation-2-col-left {
+				display: flex;
+				align-items: center;
+			}
+
+			.navigation-2-col-right {
+				display: flex;
+			}
+
+			p.navigation-2-page {
+				padding: 8px 12px;
+				margin: 0px 4px;
+			}
+
+			p.navigation-2-page.page-selected {
+				border: 1px solid cornflowerblue;
+			}
+
+			p.navigation-2-logo {
+				border: 1px solid;
+				padding: 8px 12px;
+				margin: 0px 4px;
+			}
+
+			.navigation-2-col-left h2 {
+				margin: 0px 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navigation-1">
+			<p class="logo">Logo</p>
+
+			<div class="pages">
+				<p class="page">About</p>
+				<p class="page border-right-border-left-none">Home</p>
+				<p class="page">Contact</p>
+			</div>
+		</div>
+
+		<div class="navigation-2" style="margin-top: 30px">
+			<div class="navigation-2-col-left">
+				<p class="navigation-2-logo">Logo</p>
+				<h2>Branch name</h2>
+			</div>
+			<div class="navigation-2-col-right">
+				<p class="navigation-2-page">Home</p>
+				<p class="navigation-2-page">About</p>
+				<p class="navigation-2-page">Contact</p>
+				<p class="navigation-2-page page-selected">Login</p>
+			</div>
+		</div>
+	</body>
+</html>

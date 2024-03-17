@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.btn {
+	background: red;
+}
+
+.btn:hover ~ .paragraph {
+	opacity: 1;
+}
+
+.paragraph {
+	opacity: 0;
+}
+
+.menu {
+	border: 1px solid darkslategray;
+	width: 200px;
+	height: 300px;
+	padding: 12px;
+	position: relative;
+}
+
+.menu-child {
+	border: 1px solid red;
+	padding: 12px;
+	text-align: center;
+	margin: 12px 0px;
+}
+
+p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.sub-menu-child {
+	border: 1px solid black;
+	padding: 12px 20px;
+	margin-top: 0px;
+	border-bottom: 0;
+}
+
+.sub-menu {
+	position: absolute;
+	right: -130px;
+	top: 80px;
+	opacity: 0;
+}
+
+.menu-child-users:hover ~ .sub-menu {
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.border-bottom {
+	border-bottom: 1px solid black;
+}
+
+.sub-menu-child:last-child {
+	border-bottom: 1px solid black;
+}

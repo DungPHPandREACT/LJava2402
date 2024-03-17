@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@400;500&family=Peralta&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* html,
+body {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Peralta', cursive;
+  font-family: 'Roboto Mono', monospace;
+} */
+
+/* font-family: 'Open Sans', sans-serif; */
+
+img.header-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+}
+
+.container-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.container-header__social {
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Peralta', cursive;
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	align-items: center;
+	width: 180px;
+	justify-content: space-evenly;
+}
+
+.container-header__search input[type='text'] {
+	width: 470px;
+	height: 40px;
+	border-radius: 8px;
+	padding-left: 18px;
+}
+
+.container-header__icon {
+	display: flex;
+	align-items: center;
+	width: 150px;
+	justify-content: space-around;
+}
+
+i.fa-solid.fa-house {
+	font-size: 18px;
+}
+
+i.fa-regular.fa-heart {
+	font-size: 18px;
+}
+
+.container-text {
+	/* margin-top: 16px; */
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container-text h1 {
+	margin-left: 30px;
+}
+
+.container-card {
+	display: flex;
+	padding: 16px;
+	justify-content: space-evenly;
+}
+
+.card {
+	min-width: 475px;
+	min-height: 296px;
+	border-radius: 16px;
+	display: flex;
+	overflow: hidden;
+	background: #ffd38a;
+}
+
+.card-avatar {
+	width: auto;
+	border-radius: 12px;
+	background: #e2e2e2;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+img.avatar {
+	max-width: 206.5px;
+	max-height: 200px;
+	width: 100%;
+}
+
+.list-icon {
+	display: flex;
+}
+
+.icon {
+	width: 32px;
+	height: 32px;
+	background: #fff;
+	margin: 16px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list-icon .icon {
+	background: #000;
+	color: #fff;
+}
+
+.card-info {
+	padding: 16px 32px;
+	width: 100%;
+}
+
+.row-card.social {
+	display: flex;
+}
+
+.icon:nth-child(1) {
+	margin-left: 0px;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.row-card.card-info__name h2 {
+	font-size: 36px;
+}
+
+p.card-info__job {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 8px 0px;
+}
+
+.card-info__location {
+	display: flex;
+}
+
+.card-info__location {
+	margin: 8px 0px;
+}
+
+.card-info__speaks {
+	margin: 8px 0px;
+}

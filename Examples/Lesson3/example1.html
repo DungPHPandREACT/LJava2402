@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container {
+				width: 500px;
+				border: 1px solid #96b1d6;
+				background: #dae8fc;
+				padding: 8px 16px;
+			}
+
+			p.paragraph {
+				border: 1px solid black;
+				background: #f8cecc;
+				padding: 10px;
+			}
+
+			.btn {
+				padding: 8px 12px;
+				border-radius: 4px;
+				border: none;
+			}
+
+			.btn-delete {
+				background: #d80073;
+			}
+
+			.btn-keep {
+				background: #1ba1e2;
+			}
+
+			.message {
+				border: 1px solid black;
+				background: #b0e3e6;
+				padding: 8px;
+				width: fit-content;
+				position: absolute;
+				top: 0px;
+				margin: 0;
+				top: -40px;
+				left: -20px;
+				opacity: 0;
+			}
+
+			.group-button {
+				position: relative;
+			}
+
+			.btn-delete:hover ~ .message {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p class="paragraph">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto,
+				hic repellat! Quia hic laborum accusantium nobis neque veniam aut
+				officiis maiores facilis odit provident molestias asperiores repudiandae
+				voluptatem, reiciendis ratione!
+			</p>
+
+			<div class="group-button">
+				<button class="btn btn-delete">Delete</button>
+				<button class="btn btn-keep">Keep</button>
+				<p class="message">Có không giữ, xóa đừng tiếc</p>
+			</div>
+		</div>
+	</body>
+</html>
