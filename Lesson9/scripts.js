@@ -9,7 +9,7 @@ const arrD2 = d2.split(',');
 let result1 = true;
 for (let element of arrD1) {
 	if (!arrD2.includes(element)) {
-		result = false;
+		result1 = false;
 		break;
 	}
 }
