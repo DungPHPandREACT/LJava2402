@@ -42,15 +42,37 @@
 // // Xóa attribute
 // document.getElementById('tagA').removeAttribute('data-id');
 
-// Tạo thẻ h2
-let tagH2 = document.createElement('h2');
-// Gán nội dung
-tagH2.innerText = 'Hello world';
-// Tạo attribute id
-tagH2.id = 'heading-h2';
+// // Tạo thẻ h2
+// let tagH2 = document.createElement('h2');
+// // Gán nội dung
+// tagH2.innerText = 'Hello world';
+// // Tạo attribute id
+// tagH2.id = 'heading-h2';
 
-// Selector đến thẻ body và thêm vào cuối thẻ body
-document.body.appendChild(tagH2);
+// // Selector đến thẻ body và thêm vào cuối thẻ body
+// document.body.appendChild(tagH2);
 
-// Xóa phần tử có id là heading
-document.getElementById('heading').remove();
+// // Xóa phần tử có id là heading
+// document.getElementById('heading').remove();
+
+// 1. Tạo một danh sách đồ vật yêu thích của bạn với ul#favorite-list và các li.favorite-list-item.
+// Sử dụng DOM để thay đổi nội dung của tất cả li.favorite-list-item thành “I love this thing”.
+const tagsLi = document.querySelectorAll('li.favorite-list-item');
+for (let tagLi of tagsLi) {
+	tagLi.innerHTML = 'I love this thing';
+}
+
+// Sử dụng DOM để thay đổi màu chữ của các li.favorite-list-item thành màu đỏ.
+for (let tagLi of tagsLi) {
+	tagLi.style.color = 'red';
+}
+
+// Nhập vào 1 đoạn text từ bàn phím. Thêm vào ul#favorite-list một li có nội dung là text vừa nhập vào.
+const content = 'Thẻ li mới';
+
+// Tạo thẻ li mới
+const newTagLi = document.createElement('li');
+// Gán nội dung cho thẻ li
+newTagLi.innerText = content;
+// Selector đến thẻ ul và thêm thẻ li vừa tạo vào cuối
+document.querySelector('ul#favorite-list').append(newTagLi);
