@@ -22,22 +22,35 @@
 // document.getElementById('heading').innerText =
 // 	'<a href="https://google.com">Nội dung đã được thay đổi từ Javascript</a>';
 
-console.log(
-	"document.getElementById('tagA').href: ",
-	document.getElementById('tagA').href
-);
-console.log(
-	"document.getElementById('tagA').getAttribute('data-id'): ",
-	document.getElementById('tagA').getAttribute('data-id')
-);
+// console.log(
+// 	"document.getElementById('tagA').href: ",
+// 	document.getElementById('tagA').href
+// );
+// console.log(
+// 	"document.getElementById('tagA').getAttribute('data-id'): ",
+// 	document.getElementById('tagA').getAttribute('data-id')
+// );
 
-document.getElementById('tagA').href = 'https://google.com';
-document.getElementById('tagA').setAttribute('data-id', 200);
-document.getElementById('tagA').target = '_blank';
+// document.getElementById('tagA').href = 'https://google.com';
+// document.getElementById('tagA').setAttribute('data-id', 200);
+// document.getElementById('tagA').target = '_blank';
 
-// Thay đổi css
-document.getElementById('heading').style.color = 'pink';
-document.getElementById('heading').style.fontSize = '46px';
+// // Thay đổi css
+// document.getElementById('heading').style.color = 'pink';
+// document.getElementById('heading').style.fontSize = '46px';
 
-// Xóa attribute
-document.getElementById('tagA').removeAttribute('data-id');
+// // Xóa attribute
+// document.getElementById('tagA').removeAttribute('data-id');
+
+// Tạo thẻ h2
+let tagH2 = document.createElement('h2');
+// Gán nội dung
+tagH2.innerText = 'Hello world';
+// Tạo attribute id
+tagH2.id = 'heading-h2';
+
+// Selector đến thẻ body và thêm vào cuối thẻ body
+document.body.appendChild(tagH2);
+
+// Xóa phần tử có id là heading
+document.getElementById('heading').remove();
