@@ -77,11 +77,10 @@
 // // Selector đến thẻ ul và thêm thẻ li vừa tạo vào cuối
 // document.querySelector('ul#favorite-list').append(newTagLi);
 
-
 // Các thao tác với class
 // Thêm class vào element
 // document.getElementById('tagDiv').classList.add('hidden');
 // Xóa class trong element
 // document.getElementById('tagDiv').classList.remove('container');
 // Toggle
-document.getElementById('tagDiv').classList.toggle('container');
+// document.getElementById('tagDiv').classList.toggle('container');

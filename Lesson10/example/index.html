@@ -16,7 +16,54 @@
 			<li class="favorite-list-item">Điện thoại</li>
 		</ul> -->
 
-		<div id="tagDiv" class="container">Đây là thẻ div</div>
+		<!-- <div id="tagDiv" class="container">Đây là thẻ div</div> -->
+
+		<!-- Cách 1 -->
+		<!-- <button onclick="logger()">In ra màn hình</button> -->
+
+		<input type="text" id="input" onInput="testEventChange()" />
+		<button id="btn">In ra màn hình</button>
+
+		<script>
+			// Cách 2
+			// function logger() {
+			// 	alert('Xin chào');
+			// }
+
+			// document.getElementById('btn').onclick = logger;
+
+			// document.getElementById('btn').onclick = function () {
+			// 	alert('Xin chào');
+			// };
+
+			// Cách 3
+			// document.getElementById('btn').addEventListener('click', function () {
+			// 	alert('Hello');
+			// });
+
+			// So sánh
+			// document.getElementById('btn').onclick = function () {
+			// 	alert('Xin chào 1');
+			// };
+			// document.getElementById('btn').onclick = function () {
+			// 	alert('Xin chào 2');
+			// };
+
+			document.getElementById('btn').addEventListener('click', function () {
+				// alert('Xin chào 1');
+				// Lấy giá trị người dùng nhập ở input
+				const value = document.getElementById('input').value;
+				console.log(value);
+			});
+			// document.getElementById('btn').addEventListener('click', function () {
+			// 	alert('Xin chào 2');
+			// });
+
+			function testEventChange() {
+				const value = document.getElementById('input').value;
+				console.log('Giá trị người dùng đang nhập là: ', value);
+			}
+		</script>
 
 		<script src="./scripts.js"></script>
 	</body>
