@@ -57,22 +57,31 @@
 
 // 1. Tạo một danh sách đồ vật yêu thích của bạn với ul#favorite-list và các li.favorite-list-item.
 // Sử dụng DOM để thay đổi nội dung của tất cả li.favorite-list-item thành “I love this thing”.
-const tagsLi = document.querySelectorAll('li.favorite-list-item');
-for (let tagLi of tagsLi) {
-	tagLi.innerHTML = 'I love this thing';
-}
+// const tagsLi = document.querySelectorAll('li.favorite-list-item');
+// for (let tagLi of tagsLi) {
+// 	tagLi.innerHTML = 'I love this thing';
+// }
 
 // Sử dụng DOM để thay đổi màu chữ của các li.favorite-list-item thành màu đỏ.
-for (let tagLi of tagsLi) {
-	tagLi.style.color = 'red';
-}
+// for (let tagLi of tagsLi) {
+// 	tagLi.style.color = 'red';
+// }
 
 // Nhập vào 1 đoạn text từ bàn phím. Thêm vào ul#favorite-list một li có nội dung là text vừa nhập vào.
-const content = 'Thẻ li mới';
+// const content = 'Thẻ li mới';
 
-// Tạo thẻ li mới
-const newTagLi = document.createElement('li');
-// Gán nội dung cho thẻ li
-newTagLi.innerText = content;
-// Selector đến thẻ ul và thêm thẻ li vừa tạo vào cuối
-document.querySelector('ul#favorite-list').append(newTagLi);
+// // Tạo thẻ li mới
+// const newTagLi = document.createElement('li');
+// // Gán nội dung cho thẻ li
+// newTagLi.innerText = content;
+// // Selector đến thẻ ul và thêm thẻ li vừa tạo vào cuối
+// document.querySelector('ul#favorite-list').append(newTagLi);
+
+
+// Các thao tác với class
+// Thêm class vào element
+// document.getElementById('tagDiv').classList.add('hidden');
+// Xóa class trong element
+// document.getElementById('tagDiv').classList.remove('container');
+// Toggle
+document.getElementById('tagDiv').classList.toggle('container');
