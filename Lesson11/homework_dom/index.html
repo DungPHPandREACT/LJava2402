@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.d-flex-col {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.d-flex-row {
+				display: flex;
+			}
+
+			.container {
+				align-items: center;
+			}
+
+			.ml-20 {
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container d-flex-row">
+			<div class="col-left">
+				<div class="input-value">
+					<div class="d-flex-col">
+						<label>URL</label>
+						<input type="text" id="url" placeholder="Nhập URL của ảnh" />
+					</div>
+				</div>
+				<div class="input-value">
+					<div class="d-flex-col">
+						<label>Chiều rộng (px)</label>
+						<input
+							type="number"
+							id="width"
+							placeholder="Nhập chiều rộng của ảnh"
+						/>
+					</div>
+				</div>
+				<div class="input-value">
+					<div class="d-flex-col">
+						<label>Chiều cao (px)</label>
+						<input
+							type="number"
+							id="height"
+							placeholder="Nhập chiều cao của ảnh"
+						/>
+					</div>
+				</div>
+				<div class="input-value">
+					<div class="d-flex-col">
+						<label>Bo góc (px)</label>
+						<input
+							type="number"
+							id="radius"
+							placeholder="Nhập bo góc của ảnh"
+						/>
+					</div>
+				</div>
+				<div class="input-value">
+					<div class="d-flex-col">
+						<label>Alt</label>
+						<input type="text" id="alt" placeholder="Nhập alt của ảnh" />
+					</div>
+				</div>
+			</div>
+			<div class="col-right ml-20">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTue3b_EZ6ZS-cc_TC1RCTdAhcmXwzL4PUsHA&usqp=CAU"
+					style="width: 100px; height: 100px"
+				/>
+			</div>
+		</div>
+
+		<script src="./scripts.js"></script>
+	</body>
+</html>
