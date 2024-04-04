@@ -67,10 +67,43 @@
 
 // console.log(functionReturnObject('Dũng', 18))
 
-import { add as sum, PI } from './math.js';
-import abc from './math.js';
+// import { add as sum, PI } from './math.js';
+// import abc from './math.js';
 
-console.log(abc);
+// console.log(abc);
 
-console.log('Giá trị của PI là: ', PI);
-console.log(sum(4, 8));
+// console.log('Giá trị của PI là: ', PI);
+// console.log(sum(4, 8));
+
+// const student1 = {
+// 	name: 'Trần Thị B',
+// 	age: 18,
+// };
+
+// const student2 = { ...student1, gender: 'girl' };
+
+// student2.name = 'Nguyễn Văn A';
+// console.log(student1);
+// console.log(student2);
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1];
+// arr2[1] = 'hai';
+// console.log(arr1);
+// console.log(arr2);
+
+let value = 0;
+
+// let number;
+// if (value) {
+// 	number = value;
+// } else {
+// 	number = 1;
+// }
+// console.log(number);
+// || ??
+// let number = value || 1;
+
+// value === null hoặc value === undefined
+let number = value ?? 1;
+console.log(number);
