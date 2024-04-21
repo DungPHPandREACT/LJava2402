@@ -1,4 +1,4 @@
-const listStudent = JSON.parse(localStorage.getItem('listStudent'));
+let listStudent = JSON.parse(localStorage.getItem('listStudent')) ?? [];
 
 const $table = document.getElementById('table');
 // Selector đến button "Create student"
