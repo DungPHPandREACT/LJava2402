@@ -34,7 +34,6 @@ const $english_score = document.getElementById('english_score');
 const $literature_score = document.getElementById('literature_score');
 
 // Chức năng read:
-
 const renderStudents = () => {
 	let rowsStudent = '';
 	for (let student of listStudent) {
@@ -47,7 +46,7 @@ const renderStudents = () => {
                 <td>${student.english_score}</td>
                 <td>${student.literature_score}</td>
                 <td>
-                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-success" onclick="updateStudent(${student.id})">Update</button>
                     <button class="btn btn-danger" onClick="deleteStudent(${student.id})">Delete</button>
                 </td>
             </tr>
@@ -112,5 +111,21 @@ const deleteStudent = (id) => {
 	// Bước 5: Gọi lại hàm renderStudents
 	renderStudents();
 };
+
+// Chức năng update
+// Bước 1: Gán được sự kiện onclick cho button update
+const updateStudent = (id) => {
+	// Bước 2: Lấy được thông tin học sinh mà mình muốn update
+	let index = -1;
+	for (let i = 0; i < listStudent.length; i++) {
+		if (listStudent[i].id === id) {
+			index = i;
+		}
+	}
+	const studentUpdate = listStudent[index];
+	console.log('studentUpdate: ', studentUpdate);
+	// Bước 3: Hiển thị thông tin của học sinh đó lên các ô input tương ứng
+}
+
 
 renderStudents();
