@@ -1,21 +1,4 @@
-const listStudent = [
-	{
-		id: 1,
-		name: 'Nguyễn Việt Hà',
-		gender: 'nam',
-		math_score: 10,
-		english_score: 9,
-		literature_score: 9,
-	},
-	{
-		id: 2,
-		name: 'Trần Thị B',
-		gender: 'nữ',
-		math_score: 8,
-		english_score: 8,
-		literature_score: 8,
-	},
-];
+const listStudent = JSON.parse(localStorage.getItem('listStudent'));
 
 const $table = document.getElementById('table');
 // Selector đến button "Create student"
@@ -98,6 +81,8 @@ $buttonCreate.onclick = () => {
 	renderStudents();
 	// Bước 6: Clear giá trị người dùng nhập ở input
 	clearInput();
+	// Bước 7: Cập nhật thông tin vào local storage
+	localStorage.setItem('listStudent', JSON.stringify(listStudent));
 };
 
 // Chức năng delete
@@ -116,6 +101,8 @@ const deleteStudent = (id) => {
 	listStudent.splice(index, 1);
 	// Bước 5: Gọi lại hàm renderStudents
 	renderStudents();
+	// Bước 6: Cập nhật thông tin vào local storage
+	localStorage.setItem('listStudent', JSON.stringify(listStudent));
 };
 
 // Chức năng update
@@ -184,6 +171,8 @@ $buttonUpdate.onclick = () => {
 	// Bước 8: Show button "Create student" và ẩn button "Update student"
 	$buttonUpdate.style.display = 'none';
 	$buttonCreate.style.display = 'inline';
+	// Bước 9: Cập nhật thông tin vào local storage
+	localStorage.setItem('listStudent', JSON.stringify(listStudent));
 };
 
 // Các bước làm phần search
