@@ -66,6 +66,14 @@ $buttonCreate.onclick = () => {
 	const math_score = $math_score.value;
 	const english_score = $english_score.value;
 	const literature_score = $literature_score.value;
+	// Bước 2.1: Validate dữ liệu
+	for (let student of listStudent) {
+		if (student.id === id) {
+			document.getElementById('error_id').innerHTML = 'Id đã tồn tại';
+			return;
+		}
+	}
+
 	// Bước 3: Tạo 1 object newStudent có giá trị là các giá trị vừa nhập ở input
 	const newStudent = {
 		id,
@@ -83,6 +91,8 @@ $buttonCreate.onclick = () => {
 	clearInput();
 	// Bước 7: Cập nhật thông tin vào local storage
 	localStorage.setItem('listStudent', JSON.stringify(listStudent));
+	// Bước 8: Clear error message
+	document.getElementById('error_id').innerHTML = '';
 };
 
 // Chức năng delete
