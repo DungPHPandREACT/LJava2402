@@ -34,11 +34,15 @@ const $math_score = document.getElementById('math_score');
 const $english_score = document.getElementById('english_score');
 // Selector đến input nhập literature score
 const $literature_score = document.getElementById('literature_score');
+// Selector đến button search
+const $buttonSearch = document.getElementById('search');
+// Selector đến input nhập keyword
+const $keywordSearch = document.getElementById('keyword_search');
 
 // Chức năng read:
-const renderStudents = () => {
+const renderStudents = (students = listStudent) => {
 	let rowsStudent = '';
-	for (let student of listStudent) {
+	for (let student of students) {
 		rowsStudent += `
             <tr>
                 <th scope="row">${student.id}</th>
@@ -180,6 +184,30 @@ $buttonUpdate.onclick = () => {
 	// Bước 8: Show button "Create student" và ẩn button "Update student"
 	$buttonUpdate.style.display = 'none';
 	$buttonCreate.style.display = 'inline';
+};
+
+// Các bước làm phần search
+// Bước 1: Gán event onclick cho button search
+// $buttonSearch.onclick = () => {
+// 	console.log('Searching...');
+// 	// Bước 2: Lấy được từ khóa mà người dùng vừa nhập
+// 	const keywordSearch = $keywordSearch.value;
+// 	// Bước 3: Thực hiện lọc nội dung có chứa keyword
+// 	const result = listStudent.filter((student) =>
+// 		student.name.toLowerCase().includes(keywordSearch.toLowerCase())
+// 	);
+// 	console.log(result);
+// 	// Bước 4: Gọi hàm renderStudents để in ra kết quả vừa được xử lý
+// 	renderStudents(result);
+// };
+
+$keywordSearch.oninput = () => {
+	console.log('Searching...');
+	const keywordSearch = $keywordSearch.value;
+	const result = listStudent.filter((student) =>
+		student.name.toLowerCase().includes(keywordSearch.toLowerCase())
+	);
+	renderStudents(result);
 };
 
 renderStudents();
