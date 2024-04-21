@@ -134,6 +134,11 @@ const updateStudent = (idStudentUpdate) => {
 	$math_score.value = math_score;
 	$english_score.value = english_score;
 	$literature_score.value = literature_score;
+	// Bước 4: Disabled input nhập id
+	$id.disabled = true;
+	// Bước 5: Show button "Update student" và ẩn button "Create student"
+	$buttonUpdate.style.display = 'inline';
+	$buttonCreate.style.display = 'none';
 };
 // *Cập nhật lại thông tin học sinh
 // Bước 1: gán event on click cho button "Update student"
@@ -166,7 +171,13 @@ $buttonUpdate.onclick = () => {
 	listStudent[index] = studentUpdate;
 	// Bước 5: gọi lại hàm renderStudents
 	renderStudents();
-}
-
+	// Bước 6: Clear giá trị người dùng nhập ở input
+	clearInput();
+	// Bước 7: Enabled input nhập id
+	$id.disabled = false;
+	// Bước 8: Show button "Create student" và ẩn button "Update student"
+	$buttonUpdate.style.display = 'none';
+	$buttonCreate.style.display = 'inline';
+};
 
 renderStudents();
