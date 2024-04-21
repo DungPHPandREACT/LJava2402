@@ -73,7 +73,7 @@ $buttonCreate.onclick = () => {
 	console.log('Create student');
 	// Các bước dưới xử lý trong event click
 	// Bước 2: Lấy được dữ liệu trong các ô input người dùng vừa nhập
-	const id = $id.value;
+	const id = Number($id.value);
 	const name = $name.value;
 	const gender = $gender.value;
 	const math_score = $math_score.value;
@@ -118,6 +118,7 @@ const deleteStudent = (id) => {
 // *Hiển thị thông tin học sinh lên các ô input
 // Bước 1: Gán được sự kiện onclick cho button update
 const updateStudent = (idStudentUpdate) => {
+	console.log('idStudentUpdate: ', idStudentUpdate);
 	// Bước 2: Lấy được thông tin học sinh mà mình muốn update
 	let index = -1;
 	for (let i = 0; i < listStudent.length; i++) {
@@ -125,6 +126,7 @@ const updateStudent = (idStudentUpdate) => {
 			index = i;
 		}
 	}
+	console.log('listStudent[index]: ', listStudent[index]);
 	const { id, name, gender, math_score, english_score, literature_score } =
 		listStudent[index];
 	// Bước 3: Hiển thị thông tin của học sinh đó lên các ô input tương ứng
